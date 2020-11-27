@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- Used colors:
+    Title: https://www.color-hex.com/color/2daae3
+    Text: https://www.color-hex.com/color/041116
+    Background: https://www.color-hex.com/color/eaf6fc
+    Link: https://www.color-hex.com/color/1b8873
+    Button: https://www.color-hex.com/color/96d4f1
+    Faded text: https://www.color-hex.com/color/81888a
+    Faded button: https://www.color-hex.com/color/cae9f8 -->
+    <color name="colorTitle">#2daae3</color>
+    <color name="colorText">#041116</color>
+    <color name="colorBackground">#eaf6fc</color>
+    <color name="colorLink">#1b8873</color>
+    <color name="colorButton">#96d4f1</color>
+    <color name="colorFadedText">#81888a</color>
+    <color name="colorFadedButton">#cae9f8</color>
+</resources>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorBackground">
+
+    <Button
+        android:id="@+id/b10Accesses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:height="64dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/buyActivity10Accesses"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/bReturn"
+        app:layout_constraintEnd_toEndOf="@+id/b25Accesses"
+        app:layout_constraintStart_toStartOf="@+id/b25Accesses" />
+
+    <Button
+        android:id="@+id/b25Accesses"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:height="96dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/buyActivity25Accesses"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/b10Accesses"
+        app:layout_constraintEnd_toEndOf="@+id/b50Accesses"
+        app:layout_constraintStart_toStartOf="@+id/b50Accesses" />
+
+    <Button
+        android:id="@+id/b50Accesses"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="8dp"
+        android:height="128dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/buyActivity50Accesses"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/b25Accesses"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvPIN" />
+
+    <Button
+        android:id="@+id/bReturn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="64dp"
+        android:height="48dp"
+        android:backgroundTint="@color/colorFadedButton"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/back"
+        android:textColor="@color/colorText"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/b10Accesses"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/b10Accesses" />
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text=""
+        android:textColor="@color/colorTitle"
+        android:textSize="30sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/tvLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorTitle"
+        android:textSize="18sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toTopOf="@+id/tvPIN"
+        app:layout_constraintStart_toStartOf="@+id/tvPIN" />
+
+    <TextView
+        android:id="@+id/tvPIN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text=""
+        android:textAlignment="center"
+        android:textColor="@color/colorTitle"
+        android:textSize="18sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintStart_toStartOf="@+id/tvFirstName"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

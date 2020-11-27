@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1005308082874",
+    "firebase_url": "https://gymbox-64a3c.firebaseio.com",
+    "project_id": "gymbox-64a3c",
+    "storage_bucket": "gymbox-64a3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1005308082874:android:55c829cdbd31cdb9e22083",
+        "android_client_info": {
+          "package_name": "com.example.gymbox"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1005308082874-s0459elbna67t0ree79n5mptvbuv4un4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gymbox",
+            "certificate_hash": "94e9917874f4256a2a05ce191c142c5f71f66109"
+          }
+        },
+        {
+          "client_id": "1005308082874-9mho1k5pirunqpuqh56ho2p32t0r9392.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCASCyJ0UKkBwX9dDukVCN0WEZQboZHo24"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1005308082874-9mho1k5pirunqpuqh56ho2p32t0r9392.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
