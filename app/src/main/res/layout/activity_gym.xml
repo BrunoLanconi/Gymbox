@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GymActivity"
+    android:background="@color/colorBackground">
+
+    <TextView
+        android:id="@+id/tvFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/mainActivityTitle"
+        android:textAlignment="center"
+        android:textColor="@color/colorTitle"
+        android:textSize="72sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toTopOf="@+id/etPIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etPIN"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginEnd="64dp"
+        android:layout_marginBottom="128dp"
+        android:autofillHints="@string/gymActivityRedeem"
+        android:backgroundTint="@color/colorFadedText"
+        android:ems="10"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:hint="@string/gymActivityPIN"
+        android:inputType="number"
+        android:textColor="@color/colorText"
+        android:textColorHint="@color/colorFadedText"
+        android:textSize="18sp"
+        app:autoSizeTextType="none"
+        app:layout_constraintBottom_toTopOf="@+id/bRedeem"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bRedeem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="128dp"
+        android:height="64dp"
+        android:backgroundTint="@color/colorButton"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/gymActivityRedeem"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/bUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/colorFadedButton"
+        android:fontFamily="@font/josefin_sans_bold"
+        android:text="@string/gymActivityUser"
+        android:textColor="@color/colorText"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

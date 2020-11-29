@@ -10,29 +10,33 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gymbox">
         <activity
+            android:name=".GymActivity"
+            android:label="Gymbox"
+            android:theme="@style/Theme.Design.NoActionBar" />
+        <activity
             android:name=".LoginActivity"
             android:label="Gymbox"
-            android:theme="@style/Theme.Design.NoActionBar"></activity>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".TeacherActivity"
             android:label="Gymbox"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".StudentActivity"
             android:label="Gymbox"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".RegisterActivity"
             android:label="Gymbox"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".ConfirmActivity"
             android:label="Gymbox"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".BuyActivity"
             android:label="Gymbox"
-            android:theme="@style/Theme.Design.NoActionBar"/>
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:label="Gymbox"

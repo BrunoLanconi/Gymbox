@@ -93,7 +93,7 @@ public class RegisterFunctions extends AppCompatActivity {
                             }
                         }
                         if (!readPreference("firstName").equals("") && !TextUtils.isEmpty(document.getString("firstName"))) {
-                            createToast(mContext.getString(R.string.enterToast) + readPreference("firstName") + "!");
+                            createToast(mContext.getString(R.string.enterToast) + " " + readPreference("firstName") + "!");
                         } else {
                             createToast(mContext.getString(R.string.enterToastAlternative));
                         }
@@ -233,6 +233,34 @@ public class RegisterFunctions extends AppCompatActivity {
         } else {
             createToast(mContext.getString(R.string.verifyFirstLastNameInvalidFirstName));
             return false;
+        }
+
+    }
+
+
+    /**
+     * Return if PIN is valid
+     *
+     * @param PIN PIN to validate
+     * @return boolean
+     */
+    public boolean verifyPIN(String PIN) {
+
+        if (PIN.equals("") || TextUtils.isEmpty(PIN)) {
+            createToast(mContext.getString(R.string.verifyPINToastPINFailed));
+            return false;
+        } else {
+            if (PIN.trim().matches("^\\d+$")) {
+                if (PIN.length() == 6) {
+                    return true;
+                } else {
+                    createToast(mContext.getString(R.string.verifyPINToastPINLengthFailed));
+                    return false;
+                }
+            } else {
+                createToast(mContext.getString(R.string.verifyPINToastPINCharFailed));
+                return false;
+            }
         }
 
     }
@@ -438,6 +466,48 @@ public class RegisterFunctions extends AppCompatActivity {
         toast.show();
 
     }
-    
+
+
+    /**
+     * Redeem PIN
+     *
+     * @param PIN PIN to redeem
+     */
+    public void redeem(String PIN) {
+        if (verifyPIN(PIN)) {
+            db.collection("pins").get().addOnCompleteListener(task -> {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : Objects.requireNonNull(task.getResult())) {
+                        if (document.getId().equals(PIN)) {
+                            String uID = document.getString("uID");
+                            db.collection("users").get().addOnCompleteListener(task2 -> {
+                                if (task2.isSuccessful()) {
+                                    for (QueryDocumentSnapshot document2 : Objects.requireNonNull(task2.getResult())) {
+                                        if (document2.getId().equals(uID)) {
+                                            int accesses = Math.toIntExact(document2.getLong("accesses"));
+                                            if (accesses > 0) {
+                                                createToast(mContext.getString(R.string.redeemToastAccesses) + " " + document2.getString("firstName") + "!");
+                                                DocumentReference DocumentRef = db.collection("users").document(uID);
+                                                Map<String, Object> info = new HashMap<>();
+                                                info.put("accesses", accesses - 1);
+                                                DocumentRef.update(info);
+                                                createLog("access");
+                                                // Release access
+                                            } else {
+                                                createToast(mContext.getString(R.string.redeemToastAccessesFailed));
+                                            }
+                                        }
+                                    }
+                                }
+                            });
+                        }
+                    }
+                }
+            });
+
+        }
+
+    }
+
 
 }

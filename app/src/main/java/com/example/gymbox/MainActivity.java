@@ -1,6 +1,7 @@
 package com.example.gymbox;
 
 
+// Importing general functions
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;

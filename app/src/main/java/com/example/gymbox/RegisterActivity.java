@@ -219,7 +219,7 @@ public class RegisterActivity extends AppCompatActivity {
                         finish();
                     }
                     registerFunctions.createLog("name");
-                    Toast.makeText(getApplicationContext(), getString(R.string.registerActivityToastFirstConfirm) + RegisterFunctions.capitalize(etLastName.getText().toString()) + ".", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), getString(R.string.registerActivityToastFirstConfirm) + " " + RegisterFunctions.capitalize(etLastName.getText().toString()) + ".", Toast.LENGTH_SHORT).show();
                 }).addOnFailureListener(e -> Toast.makeText(getApplicationContext(), getString(R.string.registerActivityToastFirstConfirmFailed), Toast.LENGTH_SHORT).show());
             }
         });
