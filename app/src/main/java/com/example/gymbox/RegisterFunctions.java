@@ -491,7 +491,12 @@ public class RegisterFunctions extends AppCompatActivity {
                                                 Map<String, Object> info = new HashMap<>();
                                                 info.put("accesses", accesses - 1);
                                                 DocumentRef.update(info);
-                                                createLog("access");
+                                                Map<String, Object> info2 = new HashMap<>();
+                                                info2.put("log", "redeem");
+                                                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+                                                LocalDateTime now = LocalDateTime.now();
+                                                DocumentReference documentRef = db.collection("logs").document(uID).collection("logs").document(dtf.format(now));
+                                                documentRef.set(info2);
                                                 // Release access
                                             } else {
                                                 createToast(mContext.getString(R.string.redeemToastAccessesFailed));
